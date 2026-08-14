@@ -52,50 +52,51 @@ hr{border:0;border-top:1px solid var(--line2);margin:34px 0}
 <body>
 <main>
 <h1 id="h0">AEO 원리와 마롱 커버리지 — 무엇이 확인됐고, 무엇을 실험해야 하나</h1>
+<blockquote><p><strong>무엇</strong> — <strong>분석 문서</strong>. 조형물 한 업종을 깊이 파서 <strong>AEO라는 기계의 작동 원리</strong>를 추정하고,<br>그 추정을 검증할 <strong>실험을 설계</strong>한다<br><strong>읽을 사람</strong> — 이 프로젝트를 처음 보는 사람·에이전트. 앞 대화를 하나도 모른다고 가정하고 씀<br><strong>담는다</strong> — 파이프라인 구조 · 단계별 확인된 사실(증거등급) · 마롱 커버리지 · 모르는 것 · 실험 설계</p></blockquote>
 <p><strong>마롱컴퍼니(조형물 제작 업체)는 여기서 고객이 아니라 표본이다.</strong> 이 문서의 목적은 마롱의 성적을 보고하는 것이 아니라, <strong>마롱이라는 한 사례에서 AEO의 일반 원리를 끌어내는 것</strong>이다. 마롱 고유의 사정은 §3에 따로 모았다.</p>
 <hr>
-<h2 id="h3">0. 이 문서가 답하는 것과 답하지 못하는 것</h2>
+<h2 id="h4">0. 이 문서가 답하는 것과 답하지 못하는 것</h2>
 <div class="scroll"><table><tr><th style="text-align:left"></th><th style="text-align:left"></th></tr><tr><td style="text-align:left">✅ 답한다</td><td style="text-align:left">AI가 답을 만들 때 <strong>어떤 단계를 거치는가</strong>, 각 단계에서 <strong>무엇이 관측됐는가</strong></td></tr><tr><td style="text-align:left">✅ 답한다</td><td style="text-align:left">마롱이 <strong>어디를 먹고 어디를 못 먹는가</strong>, 못 먹는 자리가 <strong>몇 종류인가</strong></td></tr><tr><td style="text-align:left">✅ 답한다</td><td style="text-align:left">커버리지를 올리려면 <strong>무엇을 실험해야 하는가</strong>, 어떤 순서로</td></tr><tr><td style="text-align:left">❌ 못 답한다</td><td style="text-align:left"><strong>인과.</strong> "제목을 고치면 오른다"는 아직 가설이다. §6의 실험이 그걸 가른다</td></tr><tr><td style="text-align:left">❌ 못 답한다</td><td style="text-align:left"><strong>다른 업종에도 통하는가.</strong> 조형물 하나만 깊이 팠다</td></tr></table></div>
 <p><strong>표본</strong> — 조형물 질문 45개 · 측정 372회 · AI 검색어 897개 · 출처 19,705건 · 직접 크롤링한 페이지 7,077쪽 · 마롱 블로그 글 702편 전수.</p>
 <blockquote><h4 class="qh">📊 <a href="https://docs.google.com/spreadsheets/d/1yydm7uzzEsBZRVxYL0Ak6uvGUoj4T1U-UmghBN3yljw/edit"><strong>마롱 AEO 맵 — 측정 전체 보기</strong></a></h4><p><strong>이 문서의 모든 숫자는 이 표에서 나왔습니다.</strong> 눌러서 직접 확인하실 수 있습니다.<br><strong><code>질문</code> 탭 45줄</strong> — 질문마다 상태 · 언급률 · 표본 · AI가 덧붙인 말.<br>상태로 거르고 언급률 낮은 순으로 보면 <strong>할 일이 위에서부터 나옵니다.</strong><br><strong><code>측정</code> 탭 372줄</strong> — 한 줄이 한 번 던진 것.<br>AI가 실제로 만든 검색어와 <strong>인용한 URL이 그대로</strong> 들어 있습니다. 눌러서 그 글을 열어볼 수 있습니다.</p></blockquote>
 <hr>
-<h2 id="h8">1. AEO는 어떤 기계인가</h2>
-<h3 id="h9">1-1. 5단 파이프라인</h3>
+<h2 id="h9">1. AEO는 어떤 기계인가</h2>
+<h3 id="h10">1-1. 5단 파이프라인</h3>
 <p>손님이 던진 말이 답변에 이르기까지 다섯 번 걸러진다. <strong>어느 단계에서 걸리느냐에 따라 처방이 완전히 달라진다.</strong> 지금까지 우리가 "AEO"라고 뭉뚱그려 부른 것은 이 다섯 단계다.</p>
 <pre><code> ① 번역     손님 질문  →  AI가 스스로 만든 검색어
  ② 검색     검색어      →  결과 목록          (채널마다 검색엔진이 다르다)
  ③ 히트     결과 목록   →  AI 눈앞에 놓인 페이지
  ④ 인용     그중 일부   →  답변의 근거로 채택
  ⑤ 언급     답변 본문에 이름이 적힘</code></pre>
-<h3 id="h12">1-2. 단계별로 확인된 사실</h3>
+<h3 id="h13">1-2. 단계별로 확인된 사실</h3>
 <p><strong>증거 등급</strong> — <code>A</code> 여러 방식으로 반복 확인 / <code>B</code> 단일 관측이지만 표본 충분 / <code>C</code> 상관만 있고 인과 불명 / <code>D</code> 가설, 아직 데이터 없음</p>
-<h4 id="h14">① 번역 — AI는 손님 말을 그대로 검색하지 않는다</h4>
+<h4 id="h15">① 번역 — AI는 손님 말을 그대로 검색하지 않는다</h4>
 <pre><code>손님 질문       &quot;입체 글자 제작 업체 어디가 괜찮아?&quot;
 AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&quot;
                      ↑ 우리 말은 남았는데 업종을 지정하는 말이 붙었다</code></pre>
 <div class="scroll"><table><tr><th style="text-align:left">사실</th><th style="text-align:left">수치</th><th style="text-align:center">등급</th></tr><tr><td style="text-align:left">타깃키워드는 대체로 살아남는다</td><td style="text-align:left">1차 검색어에 생존 <strong>85%</strong> (301/335회)</td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">AI는 <strong>업종을 지정하는 말을 덧붙인다</strong></td><td style="text-align:left">질문당 평균 3~5개</td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">키워드가 사라지면 마롱은 안 나온다</td><td style="text-align:left">사라진 3회 → 언급 <strong>0회</strong></td><td style="text-align:center"><strong>C</strong> (표본 3)</td></tr><tr><td style="text-align:left">한 번의 검색 호출이 검색어 3~4개를 묶어 던진다</td><td style="text-align:left">372회 → 검색어 897개</td><td style="text-align:center"><strong>A</strong></td></tr></table></div>
 <blockquote><p><strong>⚠️ 1차 검색어만 봐야 한다.</strong> 2차 검색어는 이미 1차 결과를 보고 만든 것이라<br>"마롱이 나왔으니 마롱을 검색했다"는 순환이 된다. API는 <code>call_seq=1</code>, 앱은 <code>seq=1</code>.</p></blockquote>
-<h4 id="h18">② 검색 — 채널마다 다른 엔진을 쓴다</h4>
+<h4 id="h19">② 검색 — 채널마다 다른 엔진을 쓴다</h4>
 <div class="scroll"><table><tr><th style="text-align:left">사실</th><th style="text-align:left">수치</th><th style="text-align:center">등급</th></tr><tr><td style="text-align:left">같은 질문인데 API와 앱이 다른 사이트를 인용한다</td><td style="text-align:left">강남역 카페 13문: 인용 도메인 겹침 <strong>31%</strong></td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">조형물에서도 채널 격차가 크다</td><td style="text-align:left"><code>무대 글자 제작 업체</code> API 100% / 앱 25%</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:left"><strong>원인은 모른다</strong></td><td style="text-align:left">색인 문제인지 검색 백엔드가 다른지 미확인</td><td style="text-align:center"><strong>D</strong></td></tr></table></div>
-<h4 id="h20">③ 히트 — 첫 관문. 여기서 0이면 끝이다</h4>
+<h4 id="h21">③ 히트 — 첫 관문. 여기서 0이면 끝이다</h4>
 <div class="scroll"><table><tr><th style="text-align:left">사실</th><th style="text-align:left">수치</th><th style="text-align:center">등급</th></tr><tr><td style="text-align:left"><strong>히트 0이면 인용 0.</strong> 예외 없음</td><td style="text-align:left">45문 전수 확인</td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">사이트가 AI 봇을 막으면 아예 안 걸린다</td><td style="text-align:left"><code>hydang.co.kr</code> robots.txt에 <code>OAI-SearchBot</code> 없음</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:left">AI는 <strong>PDF·공공 발주 자료도 근거로 쓴다</strong></td><td style="text-align:left">가격 질문에서 <code>site:go.kr</code> 검색을 스스로 만듦</td><td style="text-align:center"><strong>B</strong></td></tr></table></div>
-<h4 id="h22">④ 인용 — 훑은 것 중 일부만 쓴다</h4>
+<h4 id="h23">④ 인용 — 훑은 것 중 일부만 쓴다</h4>
 <div class="scroll"><table><tr><th style="text-align:left">사실</th><th style="text-align:left">수치</th><th style="text-align:center">등급</th></tr><tr><td style="text-align:left">훑은 것 중 인용되는 비율</td><td style="text-align:left">19,655건 중 5,259건 = <strong>27%</strong></td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">★ <strong>AI가 실제로 열어 읽은 페이지는 인용률이 2.4배</strong></td><td style="text-align:left">opened 50건 중 <strong>64%</strong> vs 일반 히트 27%</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:left">목록·게시판 페이지는 거의 안 쓰인다</td><td style="text-align:left">링크 많은 페이지 인용률 <strong>15~22%</strong></td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:left">홈페이지 첫 화면이 개별 글보다 유리?</td><td style="text-align:left"><strong>분류 기준을 바꾸면 차이가 사라진다</strong></td><td style="text-align:center"><strong>D</strong></td></tr><tr><td style="text-align:left">제목에 특정 단어가 있으면 인용률이 높다</td><td style="text-align:left"><code>업체</code> 30% vs 8% (3.9배)</td><td style="text-align:center"><strong>C</strong></td></tr></table></div>
-<h4 id="h24">⑤ 언급 — 인용되면 거의 자동으로 이름이 뜬다</h4>
+<h4 id="h25">⑤ 언급 — 인용되면 거의 자동으로 이름이 뜬다</h4>
 <pre><code>372회 측정 중
    검색에 잡힘        262회 (70%)
    답변 근거로 인용    239회 (64%)
    답변에 이름이 뜸    264회 (71%)   ← 인용보다 많다</code></pre>
 <p><strong>AI는 출처로 걸지 않고도 이름을 말한다.</strong> 인용만 세면 실제 노출을 과소평가한다. 그리고 <strong>③→④가 진짜 관문이고, ④→⑤는 관문이 아니다.</strong></p>
-<h4 id="h27">전 단계에 걸친 사실 — 답은 매번 다르다</h4>
+<h4 id="h28">전 단계에 걸친 사실 — 답은 매번 다르다</h4>
 <div class="scroll"><table><tr><th style="text-align:left">사실</th><th style="text-align:left">수치</th><th style="text-align:center">등급</th></tr><tr><td style="text-align:left">같은 질문 3회에서 같은 도메인이 세 번 다 인용될 확률</td><td style="text-align:left"><strong>8%</strong> (448개 중 37개)</td><td style="text-align:center"><strong>A</strong></td></tr><tr><td style="text-align:left">그래서 <strong>1회 측정으로는 아무 말도 못 한다</strong></td><td style="text-align:left">회차를 늘리자 45문 중 <strong>5문의 판정이 뒤집혔다</strong></td><td style="text-align:center"><strong>A</strong></td></tr></table></div>
 <blockquote><p><strong>이것이 이 프로젝트에서 가장 실용적인 발견일 수 있다.</strong><br>"AI에 검색해보니 우리가 안 나오네"는 <strong>근거가 아니다.</strong> 최소 3회, 실무적으로는 8회 이상.<br>AEO를 사업으로 만든다면 <strong>"몇 번 재야 하는가"가 곧 측정 상품의 규격</strong>이 된다.</p></blockquote>
-<h3 id="h30">1-3. 한 줄로 줄이면</h3>
+<h3 id="h31">1-3. 한 줄로 줄이면</h3>
 <pre><code>AEO 는 순위 싸움이 아니라 매칭 싸움이다.
    SEO   &quot;이 검색어에서 몇 위인가&quot;
    AEO   &quot;AI가 만들어낸 그 검색어에 우리가 걸리기는 하는가&quot;</code></pre>
 <p><strong>손님의 말과 우리 글 사이에 AI의 번역이 한 겹 끼어 있다.</strong> 그 번역 결과에 걸리지 않으면 글이 아무리 좋아도 0이다. §1-1의 ①→③이 그 얘기다.</p>
-<h3 id="h33">1-4. ★ 그림 하나로 — 어디서 어떻게 죽는가</h3>
+<h3 id="h34">1-4. ★ 그림 하나로 — 어디서 어떻게 죽는가</h3>
 <pre><code>   손님이 던진 말
    &quot;입체 글자 제작 업체 어디가 괜찮아?&quot;
           │
@@ -136,7 +137,7 @@ AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&qu
 <p><strong>죽는 법이 넷이고, 처방이 넷 다 다르다.</strong> 이걸 안 가르고 "AEO를 하자"고 하면 A에 걸린 곳에 글을 쓰고, B에 걸린 곳에 백링크를 걸게 된다. 둘 다 헛돈이다.</p>
 <div class="scroll"><table><tr><th style="text-align:left">죽는 법</th><th style="text-align:left">증상</th><th style="text-align:left">처방</th><th style="text-align:right">조형물 45문</th></tr><tr><td style="text-align:left"><strong>A 오조준</strong></td><td style="text-align:left">AI가 그 말을 다른 업종으로 읽는다</td><td style="text-align:left"><strong>키워드를 버린다.</strong> 고쳐서 될 일이 아니다</td><td style="text-align:right">2문 이상</td></tr><tr><td style="text-align:left"><strong>B 검색미탐</strong></td><td style="text-align:left">히트 0 (그런데 우리 업은 맞다)</td><td style="text-align:left"><strong>제목</strong>을 AI 검색어에 맞춘다</td><td style="text-align:right">1문</td></tr><tr><td style="text-align:left"><strong>C 접근차단</strong></td><td style="text-align:left">AI 봇이 못 들어온다</td><td style="text-align:left">robots·sitemap·렌더링 손보기</td><td style="text-align:right">0문 (마롱은 열려 있음)</td></tr><tr><td style="text-align:left"><strong>D 밀림</strong></td><td style="text-align:left">히트는 되는데 안 골림</td><td style="text-align:left">제목·요약을 <strong>고르고 싶게</strong> 고친다</td><td style="text-align:right">8문</td></tr></table></div>
 <blockquote><p>⚠️ <strong>A(오조준)는 §2-4의 상태 분류와 직교한다.</strong> 상태는 *결과*로 가른 것이고,<br>오조준은 *원인*이다. 실제로 오조준은 여러 상태에 흩어져 있다 —<br><code>모형 제작 업체</code>(검색미탐) · <code>대형 인형 제작 업체</code>(앱만 누락, AI는 <strong>봉제인형</strong>으로 읽는다).<br><strong>그래서 상태만 보고 처방하면 안 된다. E0으로 오조준부터 걷어내야 한다.</strong></p></blockquote>
-<h3 id="h38">1-5. ★ 제목은 <strong>두 번</strong> 일한다 — 이게 핵심이다</h3>
+<h3 id="h39">1-5. ★ 제목은 <strong>두 번</strong> 일한다 — 이게 핵심이다</h3>
 <p>우리가 "제목이 중요하다"고 말할 때, 사실 서로 다른 두 가지를 말하고 있었다.</p>
 <pre><code>③ 히트 단계   검색엔진이 색인에서 찾을 때
               → 제목이 **검색어와 겹치는가**       (찾아지는가)
@@ -147,14 +148,14 @@ AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&qu
 <p><strong>같은 '제목 고치기'인데 목표가 반대다.</strong> ③은 <em>AI가 쓴 말을 그대로 담아야</em> 하고, ④는 <em>질문에 답하는 것처럼 보여야</em> 한다.</p>
 <blockquote><p><strong>그래서 실험도 둘로 나뉜다.</strong> 검색미탐을 고치는 실험(③)과 밀림을 고치는 실험(④)은<br><strong>다른 가설을 검증한다.</strong> 하나만 해서는 "제목이 중요하다"의 절반밖에 못 밝힌다. → §6 E4a·E4b</p></blockquote>
 <hr>
-<h2 id="h44">2. 마롱 커버리지 — 어디를 먹고 어디를 못 먹나</h2>
-<h3 id="h45">2-1. 먼저 "커버"를 정의한다</h3>
+<h2 id="h45">2. 마롱 커버리지 — 어디를 먹고 어디를 못 먹나</h2>
+<h3 id="h46">2-1. 먼저 "커버"를 정의한다</h3>
 <p>커버를 뭐라고 부르느냐에 따라 성적이 3배 달라진다. <strong>세 가지를 따로 세야 한다.</strong></p>
 <pre><code>질문 커버   그 질문을 던졌을 때 답변에 이름이 뜨나       → 45문 중 41문 (91%)
 자산 커버   우리 글 중 몇 편이 실제로 쓰이나            → 702편 중 107편 (15%)
 지분        전체 인용 중 우리 몫                      → 2,723건 중 613건 (23%)</code></pre>
 <p>⚠️ <strong>"91% 커버"만 말하면 거짓말에 가깝다.</strong> 질문 목록을 우리가 만들었기 때문이다. 마롱이 잘하는 주제로 질문을 뽑았으니 높게 나오는 게 당연하다. <strong>자산 커버 15%가 더 정직한 숫자다.</strong></p>
-<h3 id="h49">2-2. 판세 — 조형물에서 인용되는 사이트</h3>
+<h3 id="h50">2-2. 판세 — 조형물에서 인용되는 사이트</h3>
 <pre><code>352회  malongcompany.co.kr        ★ 마롱 홈페이지
 261회  malongcompany.tistory.com  ★ 마롱 블로그
 157회  haoz.co.kr
@@ -165,20 +166,20 @@ AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&qu
  55회  kmong.com                  ← 프리랜서 플랫폼</code></pre>
 <p><strong>두 가지가 보인다.</strong></p>
 <ol><li>마롱은 이 업종에서 <strong>이미 인용 1·2위</strong>다. 3위와 2배 이상 차이.</li><li>상위권에 <strong>중개 플랫폼(숨고·크몽)과 공공 자료</strong>가 끼어 있다. 업체 사이트만 경쟁 상대가 아니다.</li></ol>
-<h3 id="h53">2-3. 자산 — 블로그 702편 중 107편만 쓰인다</h3>
+<h3 id="h54">2-3. 자산 — 블로그 702편 중 107편만 쓰인다</h3>
 <pre><code>AI가 답변에 인용한 글       54편  ( 7.7%)
 훑기만 하고 안 쓴 글        53편  ( 7.5%)
 한 번도 AI 눈에 안 띈 글   595편  (84.8%)</code></pre>
 <p><strong>여기서 처방이 갈린다.</strong> "글을 더 쓰자"는 595편 옆에 한 편을 더 얹는 일이다. <strong>재고가 없는 게 아니라 진열이 안 된 것이다.</strong></p>
 <p>⚠️ <strong>595편에는 아무도 안 물어본 주제의 글이 섞여 있다.</strong> 45개 질문이 전부 조형물 주제라 그 밖의 글은 안 뜨는 게 당연하다. <strong>"595편이 다 잘못됐다"고 읽으면 안 된다.</strong> 정확한 진술은 <em>"우리가 던진 45개 질문의 범위 안에서 쓰인 글이 107편"</em> 이다.</p>
-<h3 id="h57">2-4. 질문 45개 — 못 먹는 자리는 세 종류뿐이다</h3>
+<h3 id="h58">2-4. 질문 45개 — 못 먹는 자리는 세 종류뿐이다</h3>
 <div class="scroll"><table><tr><th style="text-align:left">상태</th><th style="text-align:left">뜻</th><th style="text-align:right">개수</th><th style="text-align:right">평균 언급률</th><th style="text-align:left">처방</th></tr><tr><td style="text-align:left"><strong>검색미탐</strong></td><td style="text-align:left">전 회차 히트 0. AI 눈앞에 한 번도 안 옴</td><td style="text-align:right">2</td><td style="text-align:right">0%</td><td style="text-align:left">글을 써도 소용없다. <strong>제목</strong>을 바꾸거나 포기</td></tr><tr><td style="text-align:left"><strong>앱만 누락</strong></td><td style="text-align:left">API는 걸리는데 실제 앱에서 0</td><td style="text-align:right">5</td><td style="text-align:right">23%</td><td style="text-align:left"><strong>원인 규명 먼저.</strong> 처방 미정</td></tr><tr><td style="text-align:left"><strong>밀림</strong></td><td style="text-align:left">걸리는데 답변에 잘 안 쓰임</td><td style="text-align:right">8</td><td style="text-align:right">52%</td><td style="text-align:left"><strong>글을 고친다. 실험은 여기서</strong></td></tr><tr><td style="text-align:left">노출중</td><td style="text-align:left">안정적으로 나옴</td><td style="text-align:right">30</td><td style="text-align:right">89%</td><td style="text-align:left">건드리지 않는다</td></tr></table></div>
 <pre><code>상태를 가르는 순서 (한 질문이 두 조건에 걸릴 수 있다)
    검색미탐 → 앱만 누락 → 밀림 → 노출중</code></pre>
 <p><strong>언급률은 채널을 합치지 않는다.</strong> 앱 4~7회 · API 3회로 회차 수가 달라 그냥 더하면 많이 돌린 채널이 더 세게 반영된다. 채널별로 내고 평균한다.</p>
 <hr>
-<h2 id="h62">3. 못 먹는 자리의 원인 — 지금까지의 추정</h2>
-<h3 id="h63">3-0. ★ 실제 한 회차를 처음부터 끝까지 따라가 본다</h3>
+<h2 id="h63">3. 못 먹는 자리의 원인 — 지금까지의 추정</h2>
+<h3 id="h64">3-0. ★ 실제 한 회차를 처음부터 끝까지 따라가 본다</h3>
 <p><strong>말로 설명하는 것보다 이게 빠르다.</strong> 실제 측정 3건을 그대로 옮긴다.</p>
 <pre><code>❌ 「모형 제작 업체 추천해줘」  — 검색미탐
    ① AI 검색어  국내 모형 제작 업체 【건축 모형 산업 모형 전시 모형】 추천
@@ -217,7 +218,7 @@ AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&qu
    「모형 제작 업체」   → AI가 다른 업종으로 읽는다. **키워드를 버려야 한다**
    「입체 간판 제작」   → 우리 업이 맞다. **제목을 고치면 될 수 있다**</code></pre>
 <blockquote><p><strong>AEO에서 가장 먼저 할 일은 글을 쓰는 것도 고치는 것도 아니다.</strong><br><strong>"AI가 이 키워드를 어느 업으로 읽는가"를 먼저 재는 것이다.</strong><br>그걸 안 재고 시작하면, 애초에 우리 자리가 아닌 곳에 돈을 쓴다.<br>이 진단은 <strong>질문 하나에 40원</strong>이면 된다 — AI 검색어만 뽑아 보면 나온다.</p></blockquote>
-<h3 id="h71">3-1. 옆단어 — 무엇이 붙고, 우리 제목에 있나 【등급 C】</h3>
+<h3 id="h72">3-1. 옆단어 — 무엇이 붙고, 우리 제목에 있나 【등급 C】</h3>
 <pre><code>모형 제작 업체 추천해줘        AI가 붙이는 말: 건축모형 · 3D · 프린팅
 입체 간판 제작 업체 알려줘      AI가 붙이는 말: 입체문자 · 채널간판 · 스카시</code></pre>
 <p><strong>AI가 자주 붙이는 말 중 마롱 글 제목에 없는 것들이 있다.</strong></p>
@@ -243,45 +244,45 @@ AI 실제 검색어  &quot;서울 입체문자 스카시 간판 제작 업체&qu
 B. 아예 다른 업종 (넣으면 거짓말)     봉제인형 · 3D프린팅 · 아크릴컷팅 · LED채널간판
 C. 애매 (확인 필요)                 입체문자 · 건축모형</code></pre>
 <p><strong>B가 확인되면 그건 키워드 목록을 고치라는 신호다.</strong> <code>대형 인형 제작</code>이 키워드 목록에 있는데 AI는 그 말을 <strong>봉제인형</strong>으로 읽는다 → 아무리 노력해도 못 먹는 자리다.</p>
-<h3 id="h86">3-2. 앱만 누락 5문 — 원인 미상 【등급 D】</h3>
+<h3 id="h87">3-2. 앱만 누락 5문 — 원인 미상 【등급 D】</h3>
 <pre><code>글자 스카시 만들어주는 곳 추천해줘    API 67%  앱  0%
 대형 모형 제작하는 곳 어디가 괜찮아?  API 67%  앱  0%
 입체 글자 제작 업체 어디가 괜찮아?    API 33%  앱  0%
 캐릭터 모형 제작하는 곳 알려줘        API 33%  앱  0%
 대형 인형 제작 업체 알려줘            API 33%  앱  0%</code></pre>
 <p><strong>처방을 낼 수 없다.</strong> 색인 문제인지, 앱의 검색 백엔드가 다른지, 앱이 검색어를 다르게 만드는지 아직 모른다. §6의 E3이 이걸 판다. <strong>손님은 앱을 쓰므로 이건 실제 손실이다.</strong></p>
-<h3 id="h89">3-3. 밀림 8문 — 걸리는데 안 쓰인다 【등급 C】</h3>
+<h3 id="h90">3-3. 밀림 8문 — 걸리는데 안 쓰인다 【등급 C】</h3>
 <p><strong>④인용 단계에서 지는 자리다.</strong> 히트는 되므로 검색 문제가 아니라 <strong>고르기 문제</strong>다. AI는 결과 20~30개를 다 열어보지 않고 제목·요약만 보고 고른다(§1-5) — 그 목록에서 밀린 것이다.</p>
 <p>노출중 30문은 이미 89%라 올라갈 자리가 없다(천장 효과). <strong>개입해도 효과가 안 보인다.</strong></p>
 <blockquote><p>⚠️ <strong>개정(2026-08-14 저녁)</strong> — 앞선 판에서 *"검색미탐은 표본이 2개뿐이라 실험 대상이 아니고,<br>밀림이 유일하게 움직일 수 있는 구간"* 이라고 썼다. <strong>그 판단은 틀렸다.</strong><br>검색미탐은 바닥이 0 이라 <strong>평균회귀도 천장효과도 없어 판독이 더 깨끗하다.</strong><br>표본이 작은 것은 늘리면 되는 문제다(§6 E0). 실험은 <strong>E4a(검색미탐)·E4b(밀림) 둘 다</strong> 한다.</p></blockquote>
 <hr>
-<h2 id="h94">4. ⚠️ 오늘 뒤집은 것 — 안 읽으면 같은 실수를 반복한다</h2>
-<h3 id="h95">4-1. "AI가 열어본 페이지는 100% 인용된다" → <strong>틀렸다. 64%다</strong></h3>
+<h2 id="h95">4. ⚠️ 오늘 뒤집은 것 — 안 읽으면 같은 실수를 반복한다</h2>
+<h3 id="h96">4-1. "AI가 열어본 페이지는 100% 인용된다" → <strong>틀렸다. 64%다</strong></h3>
 <p>앞선 기록에 <code>open_page 21건 100% 인용</code>이라고 적혀 있었다. DB로 다시 세니 <strong>50건 중 32건(64%)</strong>이다. 100%가 된 건 세는 방식이 잘못됐기 때문이다.</p>
 <p><strong>다만 발견 자체는 살아 있고 오히려 더 쓸모 있어졌다.</strong> 일반 히트의 인용률이 27%인데 <strong>열어본 것은 64%다 — 2.4배.</strong> <code>open_page</code>는 <strong>AI가 그 페이지를 특별히 신뢰한다는 신호</strong>다. ⚠️ <strong>무엇이 그걸 유발하는지는 아직 모르고, 지금 설계된 실험 중에 이걸 겨냥한 것이 없다(Q5).</strong> 표본 50건으로는 조건을 못 가른다. 측정이 더 쌓이면 그때 판다.</p>
-<h3 id="h98">4-2. "홈페이지 첫 화면이 개별 글보다 2배 유리하다" → <strong>분류를 바꾸면 사라진다</strong></h3>
+<h3 id="h99">4-2. "홈페이지 첫 화면이 개별 글보다 2배 유리하다" → <strong>분류를 바꾸면 사라진다</strong></h3>
 <pre><code>분류 기준          홈페이지   개별 글   목록
 소제목·경로 기준     37%       33%      3%     ← 오늘
 예전 기준           40%       21%      7%     ← 08-14 오전
 링크&gt;60 기준         —        41%     22%
 링크&gt;200 기준        —        35%      0%</code></pre>
 <p><strong>목록·게시판이 낮은 것만 일관되고, 홈페이지 vs 개별 글 차이는 기준에 따라 사라진다.</strong> 등급을 <code>B</code>에서 <code>D</code>로 내린다. <strong>"블로그보다 홈페이지를 먼저 손보라"는 조언은 근거가 부족하다.</strong></p>
-<h3 id="h101">4-3. "선정 가이드 형식이 통한다" → <strong>아직 모른다</strong> (이전엔 폐기라고 썼다)</h3>
+<h3 id="h102">4-3. "선정 가이드 형식이 통한다" → <strong>아직 모른다</strong> (이전엔 폐기라고 썼다)</h3>
 <pre><code>크롤링 225쪽(모든 도메인, 개별 글로 통제)   가이드 14% vs 13%   차이 없음
 마롱 107편(주제로 통제)                    가이드 28% vs 19%   1.5배</code></pre>
 <p><strong>두 분석이 서로 다른 말을 한다.</strong> 표본도 15편 vs 10편으로 작다. <code>폐기</code>가 아니라 <strong><code>판정 보류</code></strong>가 정확하다.</p>
-<h3 id="h104">4-4. 이미 폐기한 것 (유지)</h3>
+<h3 id="h105">4-4. 이미 폐기한 것 (유지)</h3>
 <ul><li><strong>"마롱이 안 다루는 주제가 있다"</strong> — 측정에 잡힌 19편만 보고 판단했다. 실제 블로그는 702편.</li></ul>
 <p>  → <strong>교훈: 측정에 안 잡힌 것과 없는 것은 다르다.</strong></p>
 <ul><li><strong>"경쟁사가 robots.txt로 막았다"</strong> — 우리 크롤러 버그였다.</li></ul>
 <p>  → <strong>교훈: 도구가 불안정한 상태의 출력을 결론으로 쓰지 마라.</strong></p>
 <hr>
-<h2 id="h110">5. 아직 모르는 것 — 이게 실험 목록의 원천이다</h2>
+<h2 id="h111">5. 아직 모르는 것 — 이게 실험 목록의 원천이다</h2>
 <p><strong>Q6 이 다른 것들과 무게가 다르다.</strong> 나머지는 *마롱을 어떻게 올릴까*를 묻지만, Q6 은 <strong>이 방법을 아예 상품으로 팔 수 있는가</strong>를 묻는다. 조형물에서만 통하는 요령이면 고객이 바뀔 때마다 처음부터 다시 연구해야 하고, 그건 서비스가 아니라 매번 새 프로젝트다.</p>
 <div class="scroll"><table><tr><th style="text-align:left">#</th><th style="text-align:left">모르는 것</th><th style="text-align:left">알면 무엇이 바뀌나</th></tr><tr><td style="text-align:left"><strong>Q1</strong></td><td style="text-align:left">제목을 고치면 실제로 오르나 (인과)</td><td style="text-align:left">AEO 처방의 핵심. <strong>팔 수 있는 것이 생긴다</strong></td></tr><tr><td style="text-align:left"><strong>Q2</strong></td><td style="text-align:left">제목을 고치고 AI에 반영되기까지 며칠인가</td><td style="text-align:left"><strong>측정·계약의 납기</strong>가 정해진다</td></tr><tr><td style="text-align:left"><strong>Q3</strong></td><td style="text-align:left">앱과 API는 왜 다른가</td><td style="text-align:left">측정을 어느 채널로 할지가 정해진다</td></tr><tr><td style="text-align:left"><strong>Q4</strong></td><td style="text-align:left">옆단어를 넣으면 <strong>엉뚱한 질문에 잘못 걸리는 부작용</strong>은 없나</td><td style="text-align:left">처방의 안전성</td></tr><tr><td style="text-align:left"><strong>Q5</strong></td><td style="text-align:left">AI가 <code>open_page</code>로 열어보게 만드는 조건은</td><td style="text-align:left">인용률 2.4배 구간에 들어가는 법</td></tr><tr><td style="text-align:left"><strong>Q6</strong></td><td style="text-align:left">조형물에서 통한 것이 다른 업종에도 통하나</td><td style="text-align:left">★ <strong>AEO 상품화 가능성 그 자체.</strong> 통하면 업종을 안 가리는 <strong>서비스</strong>가 된다. 조형물에서만 통하면 고객마다 처음부터 다시 재야 하고, 그건 상품이 아니라 매번 새 연구다</td></tr><tr><td style="text-align:left"><strong>Q7</strong></td><td style="text-align:left"><strong>AI가 이 키워드를 어느 업종으로 읽는가</strong></td><td style="text-align:left">애초에 우리 자리가 아닌 키워드를 걸러낸다. <strong>가장 싼 진단(§3-0)</strong></td></tr></table></div>
 <hr>
-<h2 id="h114">6. 실험 설계</h2>
-<h3 id="h115">6-0. 순서를 정하는 기준</h3>
+<h2 id="h115">6. 실험 설계</h2>
+<h3 id="h116">6-0. 순서를 정하는 기준</h3>
 <pre><code>① 공짜부터 — 이미 가진 데이터로 답할 수 있는 것을 먼저 턴다
 ② 그다음 싼 것 — 돈 대신 시간만 드는 것
 ③ 마지막에 개입 — 남의 사이트를 실제로 고치는 것은 되돌리기 어렵다</code></pre>
@@ -289,7 +290,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
 <div class="scroll"><table><tr><th style="text-align:left">언제</th><th style="text-align:left">실험</th><th style="text-align:left">무엇을 아나</th><th style="text-align:right">비용</th><th style="text-align:left">기간</th></tr><tr><td style="text-align:left"><strong>지금</strong></td><td style="text-align:left"><strong>E0</strong> 표적 판정</td><td style="text-align:left">AI가 이 키워드를 어느 업으로 읽나</td><td style="text-align:right">2천원</td><td style="text-align:left">이틀</td></tr><tr><td style="text-align:left">지금</td><td style="text-align:left"><strong>E1</strong> 앱·API 격차</td><td style="text-align:left">번역이 다른가, 검색엔진이 다른가</td><td style="text-align:right">0원</td><td style="text-align:left">반나절</td></tr><tr><td style="text-align:left">지금</td><td style="text-align:left"><strong>E2</strong> 다른 업종 재검증</td><td style="text-align:left">제목 규칙이 조형물 밖에서도 서나</td><td style="text-align:right">0원</td><td style="text-align:left">하루</td></tr><tr><td style="text-align:left">지금</td><td style="text-align:left"><strong>E6</strong> 접근성 진단</td><td style="text-align:left">AI 봇이 들어올 수는 있나</td><td style="text-align:right">0원</td><td style="text-align:left">하루</td></tr><tr><td style="text-align:left"><strong>지금 시작</strong></td><td style="text-align:left"><strong>E3</strong> 색인 반영 기간</td><td style="text-align:left">고치고 며칠 뒤에 재야 하나</td><td style="text-align:right">소액</td><td style="text-align:left">2~3주</td></tr><tr><td style="text-align:left">E3 뒤</td><td style="text-align:left"><strong>E4a</strong> 검색미탐 개입</td><td style="text-align:left">제목으로 <strong>걸리게</strong> 만들 수 있나 (③)</td><td style="text-align:right">4천원</td><td style="text-align:left">2주</td></tr><tr><td style="text-align:left">E3 뒤</td><td style="text-align:left"><strong>E4b</strong> 밀림 개입</td><td style="text-align:left">제목으로 <strong>골리게</strong> 만들 수 있나 (④)</td><td style="text-align:right">5천원</td><td style="text-align:left">2주</td></tr><tr><td style="text-align:left">E4에 얹어</td><td style="text-align:left"><strong>E5</strong> 부작용</td><td style="text-align:left">엉뚱한 질문에 잘못 걸리나</td><td style="text-align:right">거의 0</td><td style="text-align:left">동시</td></tr></table></div>
 <p><strong>E0 만 유일하게 돈이 드는데도 맨 앞이다.</strong> 오조준된 키워드에 개입하면 그 실험은 통째로 버려진다 — 2천원이 1만원을 지킨다.</p>
 <hr>
-<h3 id="h121">E0 【약 2천원 · 이틀】 표적 판정 — 이 질문이 애초에 우리 자리인가 <code>[원리]</code> → §3-0</h3>
+<h3 id="h122">E0 【약 2천원 · 이틀】 표적 판정 — 이 질문이 애초에 우리 자리인가 <code>[원리]</code> → §3-0</h3>
 <p><strong>개입 실험보다 먼저 해야 한다.</strong> §3-0에서 봤듯 <code>모형 제작 업체</code>는 AI가 3D프린팅 업으로 읽어서, 제목을 고쳐도 못 먹는다. <strong>그런 자리에 개입하면 실험이 통째로 낭비된다.</strong></p>
 <pre><code>방법   질문을 API 로 1회씩만 던져 **AI 1차 검색어만** 본다 (답변은 안 봐도 된다)
 판정   덧붙은 옆단어가
@@ -300,7 +301,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
 <p><strong>부수 효과가 크다.</strong> 이 판정 자체가 <strong>글을 한 자도 안 쓰고 낼 수 있는 진단서</strong>가 된다 — “당신이 노리는 키워드를 AI는 어느 업으로 읽고 있는가”. 지금 이걸 재 주는 곳이 없다.</p>
 <p><strong>동시에 E4a 의 표본을 만든다.</strong> 지금 검색미탐이 2문뿐이라 실험이 안 된다. 57개 키워드를 훑으면 <strong>히트 0인 질문을 더 찾아낼 수 있다.</strong></p>
 <hr>
-<h3 id="h127">E1 【0원 · 즉시】 앱과 API는 왜 다른가 <code>[원리]</code> → Q3</h3>
+<h3 id="h128">E1 【0원 · 즉시】 앱과 API는 왜 다른가 <code>[원리]</code> → Q3</h3>
 <p><strong>이미 가진 데이터로 답할 수 있다.</strong> 앱 385회·API 341회의 검색어가 전부 DB에 있다.</p>
 <pre><code>무엇을 보나
    같은 질문에서 앱이 만든 1차 검색어 vs API가 만든 1차 검색어
@@ -311,7 +312,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
    ② 이면 색인·백엔드 차이   → robots.txt·색인 진단이 상품이 된다</code></pre>
 <p><strong>비용 0원 · 반나절. 가장 먼저 해야 한다.</strong></p>
 <hr>
-<h3 id="h132">E2 【0원 · 즉시】 페이지 유형·제목 규칙을 다른 업종에서 재검증 <code>[원리]</code> → Q6</h3>
+<h3 id="h133">E2 【0원 · 즉시】 페이지 유형·제목 규칙을 다른 업종에서 재검증 <code>[원리]</code> → Q6</h3>
 <p>크롤링해 둔 <strong>7,077쪽</strong>에는 카페·간판·학원 등 12업종이 들어 있다. §1-2 ④의 규칙(목록 페이지 불리, 제목 단어)이 <strong>조형물 밖에서도 성립하는지</strong> 지금 확인할 수 있다.</p>
 <pre><code>무엇이 나오면 가설이 죽나
    업종별로 방향이 뒤집히면 → 제목 규칙은 조형물에서만 통하는 것.
@@ -319,7 +320,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
    방향이 일관되면        → 등급 C → B. **업종을 안 가리는 진단·처방이 된다 = 상품이 된다**</code></pre>
 <p><strong>비용 0원 · 하루. E1과 같이 돌린다.</strong></p>
 <hr>
-<h3 id="h137">E3 【1만원 안쪽 · 2~3주】 색인 반영까지 며칠인가 <code>[원리]</code> → Q2</h3>
+<h3 id="h138">E3 【1만원 안쪽 · 2~3주】 색인 반영까지 며칠인가 <code>[원리]</code> → Q2</h3>
 <p><strong>AEO 상품의 납기를 정하는 실험이다.</strong> 지금 아무도 이 숫자를 모른다.</p>
 <pre><code>조작   마롱 글 3편의 제목에 식별 가능한 말을 넣는다(예: 고유한 조합어)
 측정   매일 ① google `site:` 로 새 제목이 색인됐나
@@ -328,7 +329,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
 <blockquote><p>⚠️ <strong>이 실험은 E4a·E4b 보다 먼저 끝나야 한다.</strong> 색인이 2주 걸리는데 개입 후 1주 만에 측정하면<br>"효과 없음"이라는 <strong>잘못된 결론</strong>이 나온다. 제목 개입 실험의 일정은 전부 이 숫자에 매여 있다.</p></blockquote>
 <p><strong>비용: 측정 API 소액 · 기간 2~3주. 지금 바로 시작해야 E4a·E4b 일정이 산다.</strong></p>
 <hr>
-<h3 id="h143">E4a 【약 4천원 · 2주】 ★ 제목을 고치면 <strong>걸리게</strong> 만들 수 있나 <code>[원리]</code> → Q1 / ③히트</h3>
+<h3 id="h144">E4a 【약 4천원 · 2주】 ★ 제목을 고치면 <strong>걸리게</strong> 만들 수 있나 <code>[원리]</code> → Q1 / ③히트</h3>
 <p><strong>검색미탐을 대상으로 한다. 세 단계 중 ③히트를 검증한다.</strong></p>
 <pre><code>가설    AI 검색어 조합과 제목의 겹침을 올리면 **히트 0 → 히트 발생**
 대상    히트 0 인 질문 (지금 2문 · E0 로 6~8문까지 늘린다)
@@ -338,7 +339,7 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
 판독    0 → 0 이면 가설이 죽는다. 0 → 1 이상이면 살아난다</code></pre>
 <blockquote><p><strong>★ 이 실험이 밀림 실험보다 판독이 깨끗하다.</strong><br>바닥이 0 이라 <strong>평균회귀가 일어날 수 없고</strong>, 회차 변동(±20%p)에 묻히지도 않는다.<br><strong>0 이 1 이 되는 것은 오해할 여지가 없다.</strong><br>앞선 판에서 "검색미탐은 표본 2개라 실험 대상이 아니다"라고 썼는데, 그건 판단이 틀렸다.<br>표본이 작은 것은 <strong>늘리면 되는 문제</strong>(E0)이지 실험을 포기할 이유가 아니다.</p></blockquote>
 <hr>
-<h3 id="h148">E4b 【약 5천원 · 2주】 제목을 고치면 <strong>골리게</strong> 만들 수 있나 <code>[원리]</code> <code>[마롱]</code> → Q1 / ④인용</h3>
+<h3 id="h149">E4b 【약 5천원 · 2주】 제목을 고치면 <strong>골리게</strong> 만들 수 있나 <code>[원리]</code> <code>[마롱]</code> → Q1 / ④인용</h3>
 <p><strong>밀림을 대상으로 한다. ④인용을 검증한다. E4a 와 다른 가설이다.</strong></p>
 <pre><code>가설    AI는 결과 목록에서 제목·요약만 보고 고른다.
         제목이 &quot;질문에 답하는 것처럼&quot; 보이면 인용률이 오른다
@@ -364,21 +365,21 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
 <blockquote><p><strong>E4a 와 E4b 는 서로의 대조가 된다.</strong><br>a 만 성공하면 → 제목은 <strong>찾아지는 데만</strong> 쓰인다. 고르는 건 다른 요인이다.<br>b 만 성공하면 → 걸리는 것은 도메인·색인 문제이고, 제목은 <strong>고르는 데만</strong> 쓰인다.<br>둘 다 성공하면 → §1-5의 "제목은 두 번 일한다"가 확인된다. <strong>이게 제일 값어치 있다.</strong></p></blockquote>
 <p><strong>병목: 제목에 넣을 말을 사람이 먼저 확정해야 한다.</strong> §3-1의 B군(마롱이 안 하는 일)을 넣으면 거짓말이 되고, 검증도 오염된다. <strong>이게 지금 유일한 진행 차단 요인이다.</strong></p>
 <hr>
-<h3 id="h157">E5 【약 5천원 · E4b에 얹어서】 부작용은 없나 <code>[원리]</code> → Q4</h3>
+<h3 id="h158">E5 【약 5천원 · E4b에 얹어서】 부작용은 없나 <code>[원리]</code> → Q4</h3>
 <p><strong>E4a·E4b 와 같은 기간에 같이 재면 추가 비용이 거의 없다.</strong></p>
 <pre><code>무엇을 재나  개입 후, 마롱과 **무관한 질문**(예: 봉제인형·3D프린팅)에서
              마롱이 잘못 노출되기 시작하는가
 왜 중요한가  옆단어를 넣는 처방이 &quot;안 하는 일로 불려 나가는&quot; 결과를 낳으면
              그건 고객에게 손해다. **처방의 안전성을 같이 재야 팔 수 있다.**</code></pre>
 <hr>
-<h3 id="h161">E6 【0원 · 하루】 접근성 진단을 상품 형태로 <code>[원리]</code> → Q5 주변</h3>
+<h3 id="h162">E6 【0원 · 하루】 접근성 진단을 상품 형태로 <code>[원리]</code> → Q5 주변</h3>
 <p><code>hydang.co.kr</code>이 <code>OAI-SearchBot</code>을 허용 목록에서 빼놓아 아예 안 걸린다는 것을 이미 확인했다. <strong>이건 글을 잘 쓰고 말고 이전의 문제이고, 자동 판정이 가능하다.</strong></p>
 <pre><code>검사 항목  robots.txt 에 OAI-SearchBot·GPTBot·PerplexityBot 이 허용되나
            sitemap 이 있나 · 구글에 색인돼 있나 · 본문이 자바스크립트로만 그려지나
 대상       접근성정찰 탭의 후보 34개</code></pre>
 <p><strong>"AI가 우리 사이트에 들어올 수는 있는가"</strong> — 진단 결과가 곧 첫 보고서가 된다.</p>
 <hr>
-<h3 id="h166">실행 순서</h3>
+<h3 id="h167">실행 순서</h3>
 <pre><code>이번 주   E1 · E2 · E6      0원. 이미 가진 데이터와 공개 정보만으로 끝난다
           E0                2천원. **표적 판정 + E4a 표본 만들기**
           E3 시작            색인 시계가 지금 돌기 시작해야 일정이 산다
@@ -391,11 +392,11 @@ C. 애매 (확인 필요)                 입체문자 · 건축모형</code></p
           E4b 판독 (이중차분)</code></pre>
 <p><strong>총 예상 비용 1만 5천원 안쪽.</strong> 가장 비싼 자원은 돈이 아니라 <strong>색인 대기 2주</strong>다. 그래서 E3 를 오늘 시작해야 한다.</p>
 <hr>
-<h2 id="h170">7. 증거 등급 한눈에</h2>
+<h2 id="h171">7. 증거 등급 한눈에</h2>
 <div class="scroll"><table><tr><th style="text-align:left">주장</th><th style="text-align:center">등급</th><th style="text-align:left">근거</th></tr><tr><td style="text-align:left">히트 0이면 인용 0</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">45문 전수</td></tr><tr><td style="text-align:left">AI는 키워드 옆에 업종어를 덧붙인다</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">335회</td></tr><tr><td style="text-align:left">타깃키워드 85% 생존</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">301/335</td></tr><tr><td style="text-align:left">답은 회차마다 다르다 (3회 일치 8%)</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">448 도메인</td></tr><tr><td style="text-align:left">채널마다 인용 사이트가 다르다</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">카페 13문 + 조형물 45문</td></tr><tr><td style="text-align:left">인용되면 거의 반드시 이름이 뜬다</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:left">372회</td></tr><tr><td style="text-align:left">AI가 열어본 페이지는 인용률 2.4배</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:left">50건 (표본 작음)</td></tr><tr><td style="text-align:left">목록·게시판은 인용률이 낮다</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:left">기준 3개로 재확인</td></tr><tr><td style="text-align:left">AI는 PDF·공공자료를 근거로 쓴다</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:left">검색어 원문</td></tr><tr><td style="text-align:left">robots.txt 로 AI 봇을 막으면 안 걸린다</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:left">1개 사례</td></tr><tr><td style="text-align:left"><strong>제목에 옆단어가 있으면 인용된다</strong></td><td style="text-align:center"><strong>C</strong></td><td style="text-align:left">54 vs 53편. <strong>E4가 가른다</strong></td></tr><tr><td style="text-align:left">홈페이지가 개별 글보다 유리</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:left">분류 바꾸면 사라짐</td></tr><tr><td style="text-align:left">가이드 형식이 통한다</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:left">두 분석이 상충</td></tr><tr><td style="text-align:left">앱/API 격차의 원인</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:left">데이터 없음. <strong>E1</strong></td></tr><tr><td style="text-align:left"><strong>옆단어가 업종을 재정의한다</strong></td><td style="text-align:center"><strong>B</strong></td><td style="text-align:left">'모형' 157편 보유하고도 히트 0 · 인용된 4곳이 전부 3D프린팅 회사</td></tr><tr><td style="text-align:left">제목은 히트와 인용에서 <strong>각각</strong> 일한다</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:left">논리적 구분일 뿐 아직 미검증. <strong>E4a vs E4b</strong></td></tr></table></div>
 <hr>
 <hr>
-<h2 id="h174">8. 하나만 가져가신다면</h2>
+<h2 id="h175">8. 하나만 가져가신다면</h2>
 <p><strong>AEO는 순위 싸움이 아니라 매칭 싸움입니다.</strong> 손님의 말과 우리 글 사이에 <strong>AI의 번역이 한 겹</strong> 끼어 있습니다. 그 번역 결과에 걸리지 않으면 글이 아무리 좋아도 0입니다.</p>
 <p><strong>그리고 두 번째로 — 답은 잴 때마다 다릅니다.</strong> 같은 질문 3회에서 같은 사이트가 세 번 다 인용될 확률이 8%입니다. <strong>"AI에 검색해보니 우리가 안 나오네"는 근거가 아닙니다.</strong> 최소 3회, 실무적으로는 8회 이상 재야 합니다.</p>
 <p>측정 원본은 <a href="https://docs.google.com/spreadsheets/d/1yydm7uzzEsBZRVxYL0Ak6uvGUoj4T1U-UmghBN3yljw/edit">마롱 AEO 맵</a>에 전부 열려 있습니다.</p>
